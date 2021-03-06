@@ -89,32 +89,32 @@ RUN curl -LO ${CURL_OPTIONS} \
 # OpenJDK - Java (RPM install)
 #
 #
-RUN curl -LO ${CURL_OPTIONS} \
-      http://mirror.switch.ch/ftp/pool/4/mirror/scientificlinux/7.0/x86_64/updates/security/java-1.8.0-openjdk-1.8.0.91-0.b14.el7_2.x86_64.rpm && \
-    curl -LO ${CURL_OPTIONS} \
-      http://mirror.switch.ch/ftp/pool/4/mirror/scientificlinux/7.0/x86_64/updates/security/java-1.8.0-openjdk-headless-1.8.0.91-0.b14.el7_2.x86_64.rpm && \
-    touch /var/lib/rpm/* && \
-    yum -y install java-1.8.0-openjdk-1.8.0.91-0.b14.el7_2.x86_64.rpm java-1.8.0-openjdk-headless-1.8.0.91-0.b14.el7_2.x86_64.rpm && \
-    rm -f *.rpm && \
-    echo "exclude=java-1.8.0-openjdk java-1.8.0-openjdk-headless"  >> /etc/yum.conf
+# RUN curl -LO ${CURL_OPTIONS} \
+#       http://mirror.switch.ch/ftp/pool/4/mirror/scientificlinux/7.0/x86_64/updates/security/java-1.8.0-openjdk-1.8.0.91-0.b14.el7_2.x86_64.rpm && \
+#     curl -LO ${CURL_OPTIONS} \
+#       http://mirror.switch.ch/ftp/pool/4/mirror/scientificlinux/7.0/x86_64/updates/security/java-1.8.0-openjdk-headless-1.8.0.91-0.b14.el7_2.x86_64.rpm && \
+#     touch /var/lib/rpm/* && \
+#     yum -y install java-1.8.0-openjdk-1.8.0.91-0.b14.el7_2.x86_64.rpm java-1.8.0-openjdk-headless-1.8.0.91-0.b14.el7_2.x86_64.rpm && \
+#     rm -f *.rpm && \
+#     echo "exclude=java-1.8.0-openjdk java-1.8.0-openjdk-headless"  >> /etc/yum.conf
 
 # tomcat - Java application (RPM install)
 #
 # CVE-2013-4590, CVE-2014-0119, CVE-2014-0099, CVE-2014-0096, CVE-2014-0075
 #
-RUN curl -LO ${CURL_OPTIONS} \
-      http://vault.centos.org/7.0.1406/os/x86_64/Packages/tomcat-7.0.42-4.el7.noarch.rpm && \
-    curl -LO ${CURL_OPTIONS} \
-      http://vault.centos.org/7.0.1406/os/x86_64/Packages/tomcat-el-2.2-api-7.0.42-4.el7.noarch.rpm && \
-    curl -LO ${CURL_OPTIONS} \
-      http://vault.centos.org/7.0.1406/os/x86_64/Packages/tomcat-jsp-2.2-api-7.0.42-4.el7.noarch.rpm && \
-    curl -LO ${CURL_OPTIONS} \
-      http://vault.centos.org/7.0.1406/os/x86_64/Packages/tomcat-lib-7.0.42-4.el7.noarch.rpm && \
-    curl -LO ${CURL_OPTIONS} \
-      http://vault.centos.org/7.0.1406/os/x86_64/Packages/tomcat-servlet-3.0-api-7.0.42-4.el7.noarch.rpm && \
-    touch /var/lib/rpm/* && \
-    yum -y install yum install tomcat-7.0.42-4.el7.noarch.rpm tomcat-lib-7.0.42-4.el7.noarch.rpm tomcat-servlet-3.0-api-7.0.42-4.el7.noarch.rpm tomcat-el-2.2-api-7.0.42-4.el7.noarch.rpm tomcat-jsp-2.2-api-7.0.42-4.el7.noarch.rpm && \
-    rm -f *.rpm
+# RUN curl -LO ${CURL_OPTIONS} \
+#       http://vault.centos.org/7.0.1406/os/x86_64/Packages/tomcat-7.0.42-4.el7.noarch.rpm && \
+#     curl -LO ${CURL_OPTIONS} \
+#       http://vault.centos.org/7.0.1406/os/x86_64/Packages/tomcat-el-2.2-api-7.0.42-4.el7.noarch.rpm && \
+#     curl -LO ${CURL_OPTIONS} \
+#       http://vault.centos.org/7.0.1406/os/x86_64/Packages/tomcat-jsp-2.2-api-7.0.42-4.el7.noarch.rpm && \
+#     curl -LO ${CURL_OPTIONS} \
+#       http://vault.centos.org/7.0.1406/os/x86_64/Packages/tomcat-lib-7.0.42-4.el7.noarch.rpm && \
+#     curl -LO ${CURL_OPTIONS} \
+#       http://vault.centos.org/7.0.1406/os/x86_64/Packages/tomcat-servlet-3.0-api-7.0.42-4.el7.noarch.rpm && \
+#     touch /var/lib/rpm/* && \
+#     yum -y install yum install tomcat-7.0.42-4.el7.noarch.rpm tomcat-lib-7.0.42-4.el7.noarch.rpm tomcat-servlet-3.0-api-7.0.42-4.el7.noarch.rpm tomcat-el-2.2-api-7.0.42-4.el7.noarch.rpm tomcat-jsp-2.2-api-7.0.42-4.el7.noarch.rpm && \
+#     rm -f *.rpm
 
 # hpack-2.1.1 - Python lib
 #
@@ -134,8 +134,8 @@ RUN curl -LO ${CURL_OPTIONS} \
 #
 # https://www.cvedetails.com/cve/CVE-2014-0114/
 #
-RUN curl -LO ${CURL_OPTIONS} \
-      http://repo1.maven.org/maven2/commons-beanutils/commons-beanutils/1.8.0/commons-beanutils-1.8.0-sources.jar
+# RUN curl -LO ${CURL_OPTIONS} \
+#       http://repo1.maven.org/maven2/commons-beanutils/commons-beanutils/1.8.0/commons-beanutils-1.8.0-sources.jar
 
 # activesupport 4.2.1 - GEM package (Ruby)
 #
